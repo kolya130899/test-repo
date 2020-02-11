@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/test-repo/static/css/main.e57a259d.chunk.css",
+    "main.css": "/test-repo/static/css/main.f5ab4930.chunk.css",
     "main.js": "/test-repo/static/js/main.3f2bd297.chunk.js",
     "main.js.map": "/test-repo/static/js/main.3f2bd297.chunk.js.map",
     "runtime-main.js": "/test-repo/static/js/runtime-main.f7d8b364.js",
@@ -8,9 +8,9 @@
     "static/js/2.b20fa4a0.chunk.js": "/test-repo/static/js/2.b20fa4a0.chunk.js",
     "static/js/2.b20fa4a0.chunk.js.map": "/test-repo/static/js/2.b20fa4a0.chunk.js.map",
     "index.html": "/test-repo/index.html",
-    "precache-manifest.e447ca8ba00ded0aeed4fb67eb315d08.js": "/test-repo/precache-manifest.e447ca8ba00ded0aeed4fb67eb315d08.js",
+    "precache-manifest.0e7db44934f37ff5570ccea66d6217de.js": "/test-repo/precache-manifest.0e7db44934f37ff5570ccea66d6217de.js",
     "service-worker.js": "/test-repo/service-worker.js",
-    "static/css/main.e57a259d.chunk.css.map": "/test-repo/static/css/main.e57a259d.chunk.css.map",
+    "static/css/main.f5ab4930.chunk.css.map": "/test-repo/static/css/main.f5ab4930.chunk.css.map",
     "static/js/2.b20fa4a0.chunk.js.LICENSE.txt": "/test-repo/static/js/2.b20fa4a0.chunk.js.LICENSE.txt",
     "static/media/style.scss": "/test-repo/static/media/card-bg3.dc29500b.png",
     "static/media/open-toggler.png": "/test-repo/static/media/open-toggler.bfee8bc6.png"
@@ -18,7 +18,7 @@
   "entrypoints": [
     "static/js/runtime-main.f7d8b364.js",
     "static/js/2.b20fa4a0.chunk.js",
-    "static/css/main.e57a259d.chunk.css",
+    "static/css/main.f5ab4930.chunk.css",
     "static/js/main.3f2bd297.chunk.js"
   ]
 }
