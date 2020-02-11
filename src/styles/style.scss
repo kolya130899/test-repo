@@ -1,0 +1,365 @@
+@mixin cityPosition {
+  height: 180px;
+  color: #fff;
+  position: relative;
+  & > span {
+    position: absolute;
+    bottom: 9px;
+    left: 24px;
+
+    @include spanStyles;
+  }
+}
+@mixin spanStyles {
+  font-family: "Raleway Medium", sans-serif;
+  font-size: 13px;
+  letter-spacing: 0.025em;
+  line-height: 22px;
+}
+
+html,
+body {
+  // background-color: #dedfe0;
+  margin: 0;
+  padding: 0;
+}
+.container {
+  background-color: #fff;
+  padding: 50px 0 80px 98px;
+  display: flex;
+  flex-direction: row;
+  &__filters {
+    display: inline-block;
+    width: 270px;
+    & > h3 {
+      font-family: "Montserrat Bold", sans-serif;
+      font-size: 18px;
+      color: #33363e;
+    }
+    .categories {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
+  }
+  &__goods {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+  }
+}
+.card {
+  width: 265px;
+  height: 318px;
+  border: 1px solid #e9e9e9;
+  box-sizing: border-box;
+  display: inline-block;
+  margin: 0 0 30px 30px;
+  &:hover {
+    cursor: pointer;
+    -webkit-box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.15);
+    -moz-box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.15);
+    box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.15);
+  }
+  &:hover &__img1 {
+    background: linear-gradient(
+        to top,
+        rgba(28, 184, 255, 0.7) 0%,
+        rgba(28, 184, 255, 0.7) 100%
+      ),
+      url("../img/card-bg1.png") 10% 10% no-repeat;
+  }
+  &:hover &__img2 {
+    background: linear-gradient(
+        to top,
+        rgba(28, 184, 255, 0.7) 0%,
+        rgba(28, 184, 255, 0.7) 100%
+      ),
+      url("../img/card-bg2.png") 10% 10% no-repeat;
+  }
+  &:hover &__img3 {
+    background: linear-gradient(
+        to top,
+        rgba(28, 184, 255, 0.7) 0%,
+        rgba(28, 184, 255, 0.7) 100%
+      ),
+      url("../img/card-bg3.png") 10% 10% no-repeat;
+  }
+  & > h3 {
+    font-family: "Montserrat Regular", sans-serif;
+    font-size: 1em; //default h3 font-size: 1.17em
+    letter-spacing: 0.025em;
+    line-height: 22px;
+    text-align: left;
+    margin: 20px 20px 8px;
+    color: #33363e;
+  }
+  & > .book-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 20px;
+    & > span {
+      color: #a6a9af;
+
+      @include spanStyles;
+    }
+    & > h4 {
+      margin: 0;
+      font-family: "Montserrat Regular", sans-serif;
+      line-height: 22px;
+      color: #282d3b;
+    }
+  }
+  &__img1 {
+    background: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0.5) 0%,
+        rgba(0, 0, 0, 0.1) 70%
+      ),
+      url("../img/card-bg1.png") 10% 10% no-repeat;
+
+    @include cityPosition;
+  }
+  &__img2 {
+    background: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0.5) 0,
+        rgba(0, 0, 0, 0.1) 70%
+      ),
+      url("../img/card-bg2.png") 10% 10% no-repeat;
+
+    @include cityPosition;
+  }
+  &__img3 {
+    background: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0.5) 0,
+        rgba(0, 0, 0, 0.1) 70%
+      ),
+      url("../img/card-bg3.png") 10% 10% no-repeat;
+
+    @include cityPosition;
+  }
+}
+
+/* h1 plug styles */
+.plug {
+  text-align: center;
+  font-family: "Montserrat Regular", sans-serif;
+  margin-bottom: 40px;
+}
+/* Custom select */
+select {
+  padding: 10px 10px;
+  font-family: "Raleway Regular", sans-serif;
+  font-size: 15px;
+  color: #4c505b;
+  border: 1px solid #dee0e1;
+  width: 240px;
+  height: 42px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: url("../img/arrow.png") 94% / 15% no-repeat #fff;
+  background-size: 10px;
+}
+
+/* Custom checkbox*/
+
+.styled-checkbox {
+  position: absolute;
+  opacity: 0;
+
+  & + label {
+    position: relative;
+    cursor: pointer;
+    padding: 0;
+    font-family: "Raleway Regular", sans-serif;
+    font-size: 15px;
+    color: #4c505b;
+    & > .goods-quantity {
+      font-family: "OpenSans", sans-serif;
+      font-size: 15px;
+      color: #a6a9af;
+      margin-left: 10px;
+    }
+  }
+
+  & + label:before {
+    content: "";
+    margin-right: 10px;
+    display: inline-block;
+    vertical-align: text-top;
+    width: 18px;
+    height: 18px;
+    box-sizing: border-box;
+    border: 1px solid #d5d7d8;
+    margin-bottom: 17px;
+  }
+
+  &:hover + label:before {
+    background: #fff;
+    border: 1px solid #1cb8ff;
+  }
+
+  &:focus + label:before {
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.12);
+  }
+
+  &:checked + label:before {
+    background: #fff;
+    border: 1px solid #1cb8ff;
+  }
+
+  &:disabled + label {
+    color: #b8b8b8;
+    cursor: auto;
+  }
+
+  &:disabled + label:before {
+    box-shadow: none;
+    background: #ddd;
+  }
+
+  &:checked + label:after {
+    content: "\2713";
+    position: absolute;
+    color: #1cb8ff;
+    font-size: 10px;
+    font-weight: bold;
+    top: 3px;
+    left: 5px;
+  }
+}
+
+/*Custom range slider*/
+.price-range-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.price-range__btn {
+  width: 100px;
+  height: 35px;
+  background-color: #1cb8ff;
+  color: #fff;
+  border: none;
+  font-family: "Montserrat Bold", sans-serif;
+  text-transform: uppercase;
+  cursor: pointer;
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+.MuiSlider-root {
+  color: #1cb8ff !important;
+}
+.MuiSlider-track {
+  height: 3px !important;
+}
+.MuiSlider-thumb {
+  width: 15px !important;
+  height: 15px !important;
+  margin-top: -6px !important;
+  background-color: #fff !important;
+  border: 2px solid #1cb8ff;
+}
+
+/*For adaptive menu*/
+.open,
+.close {
+  cursor: pointer;
+  display: none;
+}
+.switcher {
+  position: absolute;
+  visibility: hidden;
+  left: -9999px;
+}
+
+@media screen and(max-width: 1200px) {
+  .open,
+  .close {
+    display: block;
+    width: 20px;
+    & > img {
+      width: 100%;
+    }
+  }
+  .open {
+    position: absolute;
+    top: 10px;
+    right: 30px;
+  }
+  .close {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+  }
+  .switcher:checked ~ nav {
+    right: 0;
+  }
+  nav {
+    position: fixed;
+    width: 100%;
+    background-color: #fff;
+    right: -100%;
+    top: 0;
+    bottom: 0;
+
+    padding: 10px 0;
+    transition: 1s;
+    text-align: center;
+    z-index: 999;
+    overflow-y: scroll;
+  }
+  .container {
+    padding: 110px 0 0;
+    &__goods {
+      display: block;
+      width: 100%;
+      padding: 0;
+      & > ul {
+        width: 80%;
+        margin: 0 auto;
+      }
+    }
+  }
+  .card {
+    margin: 10px;
+  }
+  ul {
+    padding: 0;
+  }
+  .plug {
+    font-size: 1.2em;
+    margin-left: 0;
+  }
+}
+@media screen and (max-width: 700px) {
+  .container__goods > ul {
+    width: 100%;
+  }
+}
+/*FONTS*/
+@font-face {
+  font-family: "Montserrat Bold";
+  src: url(../fonts/Montserrat-Bold.ttf);
+}
+@font-face {
+  font-family: "Montserrat Regular";
+  src: url(../fonts/Montserrat-Regular.ttf);
+}
+@font-face {
+  font-family: "Raleway Medium";
+  src: url(../fonts/Raleway-Medium.ttf);
+}
+@font-face {
+  font-family: "Raleway Regular";
+  src: url(../fonts/Raleway-Regular.ttf);
+}
+@font-face {
+  font-family: "OpenSans";
+  src: url(../fonts/OpenSans-Regular.ttf);
+}
